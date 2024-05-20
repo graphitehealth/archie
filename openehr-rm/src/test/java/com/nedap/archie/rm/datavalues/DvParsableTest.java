@@ -1,8 +1,8 @@
 package com.nedap.archie.rm.datavalues;
 
-import com.nedap.archie.rm.datatypes.CodePhrase;
-import com.nedap.archie.rm.datavalues.encapsulated.DvParsable;
-import com.nedap.archie.rm.support.identification.TerminologyId;
+import org.openehr.rm.datatypes.CodePhrase;
+import org.openehr.rm.datavalues.encapsulated.DvParsable;
+import org.openehr.rm.support.identification.TerminologyId;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -21,8 +21,6 @@ public class DvParsableTest {
 
         DvParsable utf16DvParsable = new DvParsable(new CodePhrase(new TerminologyId("IANA_character-sets"), "UTF-16"), null, "something", "markdown");
         assertEquals(20, utf16DvParsable.size()); //two bytes BOM, plus 9 characters * 2 bytes = 20
-
-
 
     }
 }
